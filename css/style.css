@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg-color: #f2f2f2;
+  --white: #fff;
+  --black: #000;
+  --blue: #007af3;
+  --light-dark: #444444;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  background: var(--bg-color);
+}
+
+.navbar {
+  background: var(--white);
+  padding: 1.6rem;
+}
+.navbar .logo {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.navbar .logo span {
+  color: var(--blue);
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .container .mobile-menu {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--light-dark);
+}
+
+section {
+  padding: 8rem 2rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 0.3rem;
+}
+.left-col h1 {
+  font-size: 2.8rem;
+  margin-top: 0.4rem;
+}
+.left-col .primary-cta {
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.7rem 1.8rem;
+  border-radius: 5rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.3rem;
+}
+.left-col .watch-video-cta {
+  display: block;
+  margin-top: 1.6rem;
+}
+.left-col .watch-video-cta img {
+  margin-right: 0.7rem;
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 4rem;
+}
+
+.features {
+  background: #20272e;
+  color: var(--white);
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+ul.features-list li {
+  font-size: 1.3rem;
+  position: relative;
+  margin-bottom: 1.6rem;
+  margin-left: 1.7rem;
+}
+ul.features-list li:before {
+  content: "";
+  left: -2.8rem;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
+  margin-right: 0.8rem;
+}
+
+.features img {
+  display: none;
+}
+
+.testimonial {
+  background: var(--blue);
+  color: var(--white);
+}
+.testimonial li {
+  background: #006bd6;
+  text-align: center;
+  padding: 2.3rem 1.2rem;
+  font-size: 1.3rem;
+  width: 80%;
+  margin: 0 auto 5rem auto;
+  border-radius: 1.6rem;
+}
+.testimonial li img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 5px solid #006bd6;
+  border-radius: 50%;
+  margin-top: -4.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: 1px solid gray;
+}
+
+.send-message-cta {
+  background: var(--blue);
+  color: var(--white);
+  outline: 0;
+  border: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  padding: 1rem 1.4rem;
+  border-radius: 5rem;
+  display: inline-block;
+  width: unset;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 60%;
+  right: 0;
+  top: 0;
+  background: #20272e;
+  height: 100vh;
+  padding: 1.6rem;
+}
+nav ul.primary-navigation {
+  margin-top: 6rem;
+}
+nav li a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 0.9rem;
+  font-size: 1.4rem;
+  transition: all 500ms ease;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+.menu-menu-exit {
+  float: left;
+  margin: 0.9rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-btn,
+.mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+  }
+
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+  }
+  .navbar nav a {
+    color: var(--dark);
+    padding: 0.2rem 1.2rem;
+  }
+  .navbar nav ul.primary-navigation {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.go-premium-cta a {
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    font-weight: bold;
+    border-radius: 5rem;
+    margin-top: -0.2rem;
+  }
+  .navbar nav li.go-premium-cta a:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 9rem 4rem;
+  }
+
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-col {
+    margin: 6rem 3rem 0 5rem;
+  }
+  .hero .container .left-col h1 {
+    font-size: 3.5rem;
+    width: 90%;
+  }
+
+  .hero-img {
+    width: 30%;
+    margin-right: 8rem;
+  }
+
+  .hero-cta {
+    display: flex;
+  }
+
+  .primary-cta {
+    margin-right: 1.6rem;
+  }
+
+  ul.features-list {
+    display: block;
+    margin-left: 5rem;
+  }
+  ul.features-list li {
+    font-size: 1.6rem;
+  }
+  ul.features-list li:before {
+    width: 30px;
+    left: -4rem;
+    height: 30px;
+    margin-right: 4rem;
+  }
+
+  .features {
+    position: relative;
+  }
+
+  .features img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2rem;
+  }
+
+  .testimonial ul {
+    display: flex;
+  }
+  .testimonial ul li {
+    margin: 0 1rem;
+  }
+
+  .contact {
+    position: relative;
+  }
+  .contact .container {
+    display: flex;
+  }
+
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45%;
+  }
+  .contact-right iframe {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .features {
+    position: relative;
+  }
+  .features:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 20rem;
+    left: 0;
+    top: -4rem;
+    background: var(--blue);
+  }
+  .features:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 15rem;
+    left: 0;
+    background: url("../images/dots.svg");
+    background-repeat: no-repeat;
+    top: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
